@@ -28,15 +28,20 @@
 "    merged into once cell
 "
 " Configuration:
-"    The `--match` command line option of `notedown` is specified by the value
-"    of the variable "g:notedown_code_match", which you may set in your .vimrc
-"    file. It defaults to 'all'. There are known problems with using the value
-"    'strict', but e.g.
+"    The following settings in your ~/.vimrc may be used to configure the
+"    plugin:
 "
-"        g:notedown_code_match='fenced'
+"    *  g:notedown_enable=1
 "
-"    may be a good alternative if you need code blocks in markdown.
-
+"       You may disable the automatic conversion between the notebook json
+"       format and markdown (i.e., deactivate this plugin) by setting this to
+"       0.
+"
+"    *  g:notedown_code_match='all'
+"
+"       Value for the `--match` command line option of `notedown`.
+"       There are known problems with using the value 'strict', but 'fenced'
+"       may be a good alternative if you need code blocks in markdown.
 
 
 " if plugin is already loaded then, not load plugin.
@@ -47,6 +52,9 @@ let loaded_ipynb = 1
 
 
 " configuration
+if !exists('g:notedown_enable')
+    let g:notedown_enable = 1
+endif
 if !exists('g:notedown_code_match')
     let g:notedown_code_match = 'all'
 endif
@@ -81,6 +89,9 @@ endfun
 
 " after reading ipynb file, convert to markdown
 fun s:read_ipynb_json()
+    if !g:notedown_enable
+        return
+    endif
     if !s:check_notedown()
         echoerr("notedown not available. Install with `pip install notedown`")
         return
@@ -154,6 +165,9 @@ endfun
 
 " after writing file, convert back to ipynb json.
 fun s:write_ipynb_json()
+    if (!g:notedown_enable)
+        return
+    endif
     if !s:check_notedown()
         echoerr("notedown not available")
         return
