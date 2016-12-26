@@ -6,7 +6,7 @@
 " Script URL:   http://www.vim.org/scripts/script.php?script_id=5506
 " Github:       https://github.com/goerz/ipynb_notedown.vim
 " Last Change:  2016/12/26
-" Version:      0.1.0
+" Version:      0.1.1
 "
 " Installation:
 "    1. Copy the ipynb_notedown.vim script to your vim plugin directory (e.g.
