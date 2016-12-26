@@ -1,6 +1,7 @@
 # ipynb_notedown.vim
 
-vim plugin for editing jupyter notebook (ipynb) files through [notedown][1].
+[Vim][1]/[Neovim][2] plugin for editing [Jupyter notebook][3] (ipynb) files
+through [notedown][4].
 
 <http://www.vim.org/scripts/script.php?script_id=5506>
 
@@ -17,7 +18,7 @@ vim plugin for editing jupyter notebook (ipynb) files through [notedown][1].
 ## Usage ##
 
 When you open a Jupyter Notebook (`*.ipynb`) file, it is automatically
-converted from json to markdown through the [`notedown` utility][1]. Upon saving
+converted from json to markdown through the [`notedown` utility][4]. Upon saving
 the file, the content is converted back to the json notebook format.
 
 The purpose of this plugin is to allow editing notebooks directly in vim.
@@ -38,4 +39,7 @@ file. It defaults to 'all'. There are known problems with using the value
 
 may be a good alternative if you need code blocks in markdown.
 
-[1]: https://github.com/aaren/notedown
+[1]: http://www.vim.org
+[2]: https://neovim.io
+[3]: http://jupyter.org
+[4]: https://github.com/aaren/notedown
