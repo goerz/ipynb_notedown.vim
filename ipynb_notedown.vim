@@ -1,9 +1,10 @@
 " ipynb_notedown.vim:
-" plugin for editing jupyter notebook (ipynb) files through notedown
+" Plugin for editing Jupyter notebook (ipynb) files through notedown.
 "
 " Maintainer:   Michael Goerz <vimscripts@mail.michaelgoerz.net>
 " URL:          https://michaelgoerz.net
-" Script URL:   n/a
+" Script URL:   http://www.vim.org/scripts/script.php?script_id=5506
+" Github:       https://github.com/goerz/ipynb_notedown.vim
 " Last Change:  2016/12/26
 " Version:      0.1.0
 "
