@@ -25,7 +25,7 @@ The purpose of this plugin is to allow editing notebooks directly in vim.
 The conversion json → markdown → json is relatively lossless, although
 some of the restrictions of the `notedown` utility apply. In particular,
 notebook and cell metadata are lost, and consecutive markdown cells are
-merged into once cell.
+merged into one cell.
 
 
 ## Configuration ##
